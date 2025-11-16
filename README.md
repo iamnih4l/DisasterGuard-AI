@@ -76,16 +76,19 @@ print(json.dumps(response, indent=2))
 ```
 
 
-🎯 Project Card (for GitHub Profile)
+##🎯 Project Card
+
 Feature	Status
-Multi-agent System	✅ Complete
-Hazard Classification	✅ Complete
-Priority Scoring	✅ Complete
-Nearby Resource Detection	✅ Complete
-Action Generation	✅ Complete
-Sessions & Memory	✅ Complete
-Normalized Output	✅ Complete
-Deployment Ready	⚙️ In progress
+
+Multi-agent System	- ✅ Complete
+Hazard Classification -	✅ Complete
+Priority Scoring - ✅ Complete
+Nearby Resource Detection -	✅ Complete
+Action Generation -	✅ Complete
+Sessions & Memory -	✅ Complete
+Normalized Output -	✅ Complete
+
+##Agent Architecture Diagram:
 
 [User Input] --> [DisasterOrchestrator] --> [Classifier Agent]
                                       --> [Prioritizer Agent]
@@ -93,7 +96,7 @@ Deployment Ready	⚙️ In progress
                                       --> [Action Generator Agent]
                                       --> [Normalized Output]
 
-📈 Future Enhancements
+##📈 Future Enhancements
 
 -Real-time geolocation tracking for mobile users
 
