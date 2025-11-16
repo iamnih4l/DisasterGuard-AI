@@ -76,44 +76,60 @@ print(json.dumps(response, indent=2))
 ```
 
 
-##🎯 Project Card
+## 🎯 Project Card (for GitHub Profile)
 
-Feature	Status
+| Feature                     | Status           |
+|-----------------------------|----------------|
+| Multi-agent System           | ✅ Complete     |
+| Hazard Classification        | ✅ Complete     |
+| Priority Scoring             | ✅ Complete     |
+| Nearby Resource Detection    | ✅ Complete     |
+| Action Generation            | ✅ Complete     |
+| Sessions & Memory            | ✅ Complete     |
+| Normalized Output            | ✅ Complete     |
+| Deployment Ready             | ⚙️ In progress |
 
-Multi-agent System	- ✅ Complete
-Hazard Classification -	✅ Complete
-Priority Scoring - ✅ Complete
-Nearby Resource Detection -	✅ Complete
-Action Generation -	✅ Complete
-Sessions & Memory -	✅ Complete
-Normalized Output -	✅ Complete
 
-##Agent Architecture Diagram:
+**Agent Architecture Diagram:**
+        +-----------------+
+        |   User Input    |
+        +--------+--------+
+                 |
+                 v
+      +----------------------+
+      | DisasterOrchestrator |
+      +----+----+----+------+
+           |    |    |
+           v    v    v
+ +-----------+ +-----------+ +-----------------+
+ | Classifier| | Prioritizer| | Resource Locator|
+ +-----------+ +-----------+ +-----------------+
+           |             |
+           +------> +-------------------+
+                    | Action Generator |
+                    +-------------------+
+                           |
+                           v
+                    +----------------+
+                    | Normalized JSON |
+                    +----------------+
 
-[User Input] --> [DisasterOrchestrator] --> [Classifier Agent]
-                                      --> [Prioritizer Agent]
-                                      --> [Resource Locator Agent]
-                                      --> [Action Generator Agent]
-                                      --> [Normalized Output]
 
-##📈 Future Enhancements
+## 📈 Future Enhancements
 
--Real-time geolocation tracking for mobile users
+- Real-time geolocation tracking for mobile users  
+- Integration with government disaster alerts  
+- Voice-based emergency reporting  
+- Multi-language support  
+- Cloud deployment & scalability  
+- A2A communication for multiple agents  
 
--Integration with government disaster alerts
+## 🤝 Contributing
 
--Voice-based emergency reporting
+- Open issues or submit PRs with bug fixes or new hazard types  
+- Suggest new features for better emergency response  
+- Share datasets to improve resource recommendations
 
--Multi-language support
+## 👤 Made by
 
--Cloud deployment & scalability
-
--A2A communication for multiple agents
-
-🤝 Contributing
-
--Open issues or PRs with bug fixes or new hazard types
-
--Suggest new features for better emergency response
-
--Share datasets for improved resource recommendations
+Mohammed Nihal
