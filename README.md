@@ -89,30 +89,20 @@ print(json.dumps(response, indent=2))
 | Normalized Output            | ✅ Complete     |
 | Deployment Ready             | ⚙️ In progress |
 
+## 🏗️ Agent Architecture
 
-**Agent Architecture Diagram:**
-        +-----------------+
-        |   User Input    |
-        +--------+--------+
-                 |
-                 v
-      +----------------------+
-      | DisasterOrchestrator |
-      +----+----+----+------+
-           |    |    |
-           v    v    v
- +-----------+ +-----------+ +-----------------+
- | Classifier| | Prioritizer| | Resource Locator|
- +-----------+ +-----------+ +-----------------+
-           |             |
-           +------> +-------------------+
-                    | Action Generator |
-                    +-------------------+
-                           |
-                           v
-                    +----------------+
-                    | Normalized JSON |
-                    +----------------+
+User Input
+   │
+   ▼
+DisasterOrchestrator
+   │       │       │
+   ▼       ▼       ▼
+Classifier  Prioritizer  Resource Locator
+   │                │
+   └───────► Action Generator
+                   │
+                   ▼
+             Normalized JSON Output
 
 
 ## 📈 Future Enhancements
