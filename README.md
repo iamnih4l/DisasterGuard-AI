@@ -89,21 +89,6 @@ print(json.dumps(response, indent=2))
 | Normalized Output            | ✅ Complete     |
 | Deployment Ready             | ⚙️ In progress |
 
-## 🏗️ Agent Architecture
-
-User Input
-   │
-   ▼
-DisasterOrchestrator
-   │       │       │
-   ▼       ▼       ▼
-Classifier  Prioritizer  Resource Locator
-   │                │
-   └───────► Action Generator
-                   │
-                   ▼
-             Normalized JSON Output
-
 
 ## 📈 Future Enhancements
 
